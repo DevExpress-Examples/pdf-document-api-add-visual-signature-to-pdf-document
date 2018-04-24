@@ -15,7 +15,11 @@ Namespace PDFSignature
                 Dim cert As New X509Certificate2("..\..\SignDemo.pfx", "dxdemo")
 
                 ' Create a PDF signature and specify signing location, contact info and reason.
-                Dim signature As New DevExpress.Pdf.PdfSignature(cert) With {.Location = "Location", .ContactInfo = "ContactInfo", .Reason = "Reason"}
+                Dim signature As New PdfSignature(cert) With { _
+                    .Location = "Location", _
+                    .ContactInfo = "ContactInfo", _
+                    .Reason = "Reason" _
+                }
 
                 ' Save the signed document.
                 documentProcessor.SaveDocument("..\..\SignedDocument.pdf", New PdfSaveOptions() With {.Signature = signature})
