@@ -1,27 +1,31 @@
-﻿using DevExpress.Pdf;
+﻿using System;
+using System.IO;
 using System.Security.Cryptography.X509Certificates;
+using DevExpress.Pdf;
 
 namespace PDFSignature {
     class Program {
         static void Main(string[] args) {
 
-            // Create a PDF document processor.
+
             using (PdfDocumentProcessor documentProcessor = new PdfDocumentProcessor()) {
 
-                // Load a PDF document. 
-                documentProcessor.LoadDocument(@"..\..\Demo.pdf");
+                documentProcessor.LoadDocument(@"..\..\Document.pdf");
 
-                // Load a certificate from a file.
-                X509Certificate2 cert = new X509Certificate2(@"..\..\SignDemo.pfx", "dxdemo");
+                X509Certificate2 certificate = new X509Certificate2(@"..\..\SignDemo.pfx", "dxdemo");
 
-                // Create a PDF signature and specify signing location, contact info and reason.
-                PdfSignature signature = new PdfSignature(cert) {
-                    Location = "Location",
-                    ContactInfo = "ContactInfo",
-                    Reason = "Reason"
-                };
+                byte[] imageData = File.ReadAllBytes("..\\..\\image.emf");
+                int pageNumber = 1;
 
-                // Save the signed document.
+                int angleInDegrees = 45;
+                double angleInRadians = angleInDegrees * (Math.PI / 180);
+                PdfOrientedRectangle signatureBounds = new PdfOrientedRectangle(new PdfPoint(620, 210), 250, 90, angleInRadians);
+                PdfSignature signature = new PdfSignature(certificate, imageData, pageNumber, signatureBounds);
+
+                signature.Location = "USA";
+                signature.ContactInfo = "john.smith@example.com";
+                signature.Reason = "Approved";
+
                 documentProcessor.SaveDocument(@"..\..\SignedDocument.pdf", new PdfSaveOptions() { Signature = signature });
             }
         }
