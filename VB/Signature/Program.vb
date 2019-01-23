@@ -15,7 +15,7 @@ Namespace Signatures
                 Dim angleInDegrees As Integer = 45
                 Dim angleInRadians As Double = angleInDegrees * (Math.PI / 180)
                 Dim signatureBounds As PdfOrientedRectangle = New PdfOrientedRectangle(New PdfPoint(620, 210), 250, 90, angleInRadians)
-                Dim signature As PdfSignature = New PdfSignature(certificate, imageData, pageNumber, signatureBounds)
+                Dim signature As DevExpress.Pdf.PdfSignature = New PdfSignature(certificate, imageData, pageNumber, signatureBounds)
                 signature.Location = "USA"
                 signature.ContactInfo = "john.smith@example.com"
                 signature.Reason = "Approved"
