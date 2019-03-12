@@ -1,7 +1,7 @@
 # How to add a digital signature into a PDF document
 
 
-This example illustrates how to apply a digital signature to a PDF document. <br><br>The Universal Subscription or an additional Document Server Subscription is required to use this example in production code. Please refer to the <a href="https://www.devexpress.com/Subscriptions/">DevExpress Subscription</a> page for pricing information. <br><br><br>
+This example illustrates how to apply a digital signature to a PDF document. <br><br>The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the <a href="https://www.devexpress.com/Subscriptions/">DevExpress Subscription</a> page for pricing information. <br><br><br>
 
 
 <h3>Description</h3>
