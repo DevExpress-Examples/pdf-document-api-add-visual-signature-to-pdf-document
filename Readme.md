@@ -14,4 +14,6 @@ Save the signed document with signing information by calling the <a href="https:
 
 <br/>
 
+**See also**: <a href="https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures">How to Apply Multiple Signatures</a>
+
 
