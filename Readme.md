@@ -1,7 +1,9 @@
 # How to add a digital signature into a PDF document
 
 
-This example illustrates how to apply a digital signature to a PDF document. <br><br>The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the <a href="https://www.devexpress.com/Subscriptions/">DevExpress Subscription</a> page for pricing information. <br><br><br>
+This example illustrates how to sign a PDF document. Please note that the PdfDocumentProcessor class allows you to apply only one digital signature to a PDF document. If you need to sign the same PDF document multiple times, use the solution from this example: <a href="https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures">How to Apply Multiple Signatures</a>.
+
+<br><br>The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the <a href="https://www.devexpress.com/Subscriptions/">DevExpress Subscription</a> page for pricing information. <br><br><br>
 
 
 <h3>Description</h3>
@@ -14,6 +16,6 @@ Save the signed document with signing information by calling the <a href="https:
 
 <br/>
 
-**See also**: <a href="https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures">How to Apply Multiple Signatures</a>
+
 
 
