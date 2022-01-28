@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T243905)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# PDF Document API - Add a Visual Signature to a PDF document
+# PDF Document API - Add a Visual Signature to a PDF Document
 
 
 This example illustrates how to sign a PDF document. Please note that the PdfDocumentProcessor class allows you to apply only one digital signature to a PDF document. If you need to sign the same PDF document multiple times, use the solution from this example: <a href="https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures">How to Apply Multiple Signatures</a>.
