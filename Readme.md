@@ -15,3 +15,11 @@ The Universal Subscription or an additional Office File API Subscription is requ
 # Files to Look At:
 
 - [Program.cs](./CS/PDFSignature/Program.cs) (VB: [Program.vb](./VB/PDFSignature/Program.vb))
+
+# Documentation
+
+- [How to: Use PdfDocumentProcessor to Add a Visual Signature to a Document](https://docs.devexpress.com/OfficeFileAPI/114053/pdf-document-api/examples/document-protection/how-to-add-a-visual-signature-into-a-pdf-document)
+
+# More Exanmples
+
+- [How to Apply Multiple Signatures](https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures)
