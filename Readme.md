@@ -11,7 +11,8 @@ This example illustrates how to use the [PdfDocumentProcessor](https://docs.deve
 
 The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the following page for pricing information: [DevExpress Subscription](https://www.devexpress.com/Subscriptions/)
 
-**NOTE:** The PdfDocumentProcessor class allows you to apply only one digital signature to a PDF document. If you need to sign the same PDF document multiple times, use the solution from this example: [How to Apply Multiple Signatures](https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures)
+>[!NOTE]
+>The `PdfDocumentProcessor` class allows you to apply only one digital signature to a PDF document. To sign the same PDF document multiple times, use the solution from this example: [How to Apply Multiple Signatures](https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures)
 
 # Files to Look At:
 
@@ -21,9 +22,10 @@ The Universal Subscription or an additional Office File API Subscription is requ
 
 - [How to: Use PdfDocumentProcessor to Add a Visual Signature to a Document](https://docs.devexpress.com/OfficeFileAPI/114053/pdf-document-api/examples/document-protection/how-to-add-a-visual-signature-into-a-pdf-document)
 
-# More Exanmples
+# More Examples
 
 - [How to Apply Multiple Signatures](https://github.com/DevExpress-Examples/pdf-document-api-multiple-signatures)
+
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 

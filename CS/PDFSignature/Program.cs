@@ -1,20 +1,24 @@
-﻿using System;
+﻿using DevExpress.Pdf;
+using System;
+using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
-using DevExpress.Pdf;
 
-namespace PDFSignature {
-    class Program {
-        static void Main(string[] args) {
+namespace PDFSignature
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
 
+            using (PdfDocumentProcessor documentProcessor = new PdfDocumentProcessor())
+            {
 
-            using (PdfDocumentProcessor documentProcessor = new PdfDocumentProcessor()) {
+                documentProcessor.LoadDocument(@"..\..\..\Document.pdf");
 
-                documentProcessor.LoadDocument(@"..\..\Document.pdf");
+                X509Certificate2 certificate = new X509Certificate2(@"..\..\..\SignDemo.pfx", "dxdemo");
 
-                X509Certificate2 certificate = new X509Certificate2(@"..\..\SignDemo.pfx", "dxdemo");
-
-                byte[] imageData = File.ReadAllBytes("..\\..\\image.emf");
+                byte[] imageData = File.ReadAllBytes("..\\..\\..\\image.emf");
                 int pageNumber = 1;
 
                 int angleInDegrees = 45;
@@ -26,8 +30,9 @@ namespace PDFSignature {
                 signature.ContactInfo = "john.smith@example.com";
                 signature.Reason = "Approved";
 
-                documentProcessor.SaveDocument(@"..\..\SignedDocument.pdf", new PdfSaveOptions() { Signature = signature });
+                documentProcessor.SaveDocument(@"..\..\..\SignedDocument.pdf", new PdfSaveOptions() { Signature = signature });
             }
+            Process.Start(new ProcessStartInfo(@"..\..\..\SignedDocument.pdf") { UseShellExecute = true });
         }
     }
 }

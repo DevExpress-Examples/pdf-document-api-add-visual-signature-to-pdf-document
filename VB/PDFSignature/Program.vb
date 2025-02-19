@@ -9,9 +9,9 @@ Namespace PDFSignature
 
         Shared Sub Main(ByVal args As String())
             Using documentProcessor As DevExpress.Pdf.PdfDocumentProcessor = New DevExpress.Pdf.PdfDocumentProcessor()
-                documentProcessor.LoadDocument("..\..\Document.pdf")
-                Dim certificate As System.Security.Cryptography.X509Certificates.X509Certificate2 = New System.Security.Cryptography.X509Certificates.X509Certificate2("..\..\SignDemo.pfx", "dxdemo")
-                Dim imageData As Byte() = System.IO.File.ReadAllBytes("..\..\image.emf")
+                documentProcessor.LoadDocument("..\..\..\Document.pdf")
+                Dim certificate As New System.Security.Cryptography.X509Certificates.X509Certificate2("..\..\SignDemo.pfx", "dxdemo")
+                Dim imageData As Byte() = System.IO.File.ReadAllBytes("..\..\..\image.emf")
                 Dim pageNumber As Integer = 1
                 Dim angleInDegrees As Integer = 45
                 Dim angleInRadians As Double = angleInDegrees * (System.Math.PI / 180)
@@ -20,7 +20,7 @@ Namespace PDFSignature
                 signature.Location = "USA"
                 signature.ContactInfo = "john.smith@example.com"
                 signature.Reason = "Approved"
-                documentProcessor.SaveDocument("..\..\SignedDocument.pdf", New DevExpress.Pdf.PdfSaveOptions() With {.Signature = signature})
+                documentProcessor.SaveDocument("..\..\..\SignedDocument.pdf", New DevExpress.Pdf.PdfSaveOptions() With {.Signature = signature})
             End Using
         End Sub
     End Class
