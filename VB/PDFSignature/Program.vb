@@ -11,7 +11,7 @@ Namespace PDFSignature
         Shared Sub Main(ByVal args As String())
             Using documentProcessor As DevExpress.Pdf.PdfDocumentProcessor = New DevExpress.Pdf.PdfDocumentProcessor()
                 documentProcessor.LoadDocument("..\..\..\Document.pdf")
-                Dim certificate As X509Certificate2 = New X509Certificate2("..\..\..\SignDemo.pfx", "dxdemo")
+                Dim certificate As X509Certificate2 = X509CertificateLoader.LoadPkcs12FromFile("..\..\..\SignDemo.pfx", "dxdemo")
                 Dim imageData As Byte() = File.ReadAllBytes("..\..\..\image.emf")
                 Dim pageNumber As Integer = 1
                 Dim angleInDegrees As Integer = 45

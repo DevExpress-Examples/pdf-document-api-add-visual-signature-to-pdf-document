@@ -16,7 +16,7 @@ namespace PDFSignature
 
                 documentProcessor.LoadDocument(@"..\..\..\Document.pdf");
 
-                X509Certificate2 certificate = new X509Certificate2(@"..\..\..\SignDemo.pfx", "dxdemo");
+                X509Certificate2 certificate = X509CertificateLoader.LoadPkcs12FromFile(@"..\..\..\SignDemo.pfx", "dxdemo");
 
                 byte[] imageData = File.ReadAllBytes("..\\..\\..\\image.emf");
                 int pageNumber = 1;
@@ -30,9 +30,9 @@ namespace PDFSignature
                 signature.ContactInfo = "john.smith@example.com";
                 signature.Reason = "Approved";
 
-                documentProcessor.SaveDocument(@"..\..\..\SignedDocument.pdf", new PdfSaveOptions() { Signature = signature });
+                documentProcessor.SaveDocument(@"..\..\..\SignedDocument.pdf", new() { Signature = signature });
             }
-            Process.Start(new ProcessStartInfo(@"..\..\..\SignedDocument.pdf") { UseShellExecute = true });
+            Process.Start(new(@"..\..\..\SignedDocument.pdf") { UseShellExecute = true });
         }
     }
 }
