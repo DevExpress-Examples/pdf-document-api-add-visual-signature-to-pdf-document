@@ -9,7 +9,7 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Document.Processor" Version="26.1.5" />
-    <PackageReference Include="DevExpress.Drawing.Skia" Version="26.1.5" />
+    <PackageReference Include="DevExpress.Document.Processor" Version="26.1.6" />
+    <PackageReference Include="DevExpress.Drawing.Skia" Version="26.1.6" />
   </ItemGroup>
 </Project>
