@@ -30,9 +30,9 @@ namespace PDFSignature
                 signature.ContactInfo = "john.smith@example.com";
                 signature.Reason = "Approved";
 
-                documentProcessor.SaveDocument(@"..\..\..\SignedDocument.pdf", new() { Signature = signature });
+                documentProcessor.SaveDocument(@"..\..\..\SignedDocument.pdf", new PdfSaveOptions () { Signature = signature });
             }
-            Process.Start(new(@"..\..\..\SignedDocument.pdf") { UseShellExecute = true });
+            Process.Start(new ProcessStartInfo(@"..\..\..\SignedDocument.pdf") { UseShellExecute = true });
         }
     }
 }
